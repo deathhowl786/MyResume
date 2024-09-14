@@ -1,0 +1,21 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sky {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87ceeb 0%, #f0f8ff 100%);
+    position: relative;
+}
+
+#plane {
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
+    width: 100px;
+    height: auto;
+}
