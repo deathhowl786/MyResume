@@ -654,6 +654,22 @@ body {
       display: block;
     }
 
+
+    .nav.responsive{
+        flex-direction: column;
+        align-items: flex-start;
+
+        li{
+            margin-bottom: 20px;
+            display: block;
+
+            a{
+                display: inline;
+            }
+        }
+
+    }
+
     #about-me .container{
         grid-template-columns: repeat(1, 1fr);
     }
