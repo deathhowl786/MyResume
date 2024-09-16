@@ -96,19 +96,19 @@
         --progress-fill: #20c997; /* Neon green for progress */    
 }
 
-.desert-amber-theme{
-    --intro: #4e3b31; /* Rich dark brown */
-    --background-color: #a16237; /* Warm amber */
-    --secondary-background-color: #d18f59; /* Light caramel */
-    --text-color: #f4e4d7; /* Soft cream */
-    --accent-color: #c74b16; /* Burnt orange */
-    --secondary-text-color: #e3c5a8; /* Pale sandy tone */
-    --highlight-color: #ff9d47; /* Bright orange for highlights */
-    --border-color: #7b4e2a; /* Dark chestnut for borders */
-    --secondary-border-color: #a97845; /* Muted copper for secondary borders */
-    --box-shadow-color: rgba(199, 75, 22, 0.4); /* Soft burnt orange shadow */
-    --progress-background: #a97845; /* Muted copper */
-    --progress-fill: #ff9d47; /* Bright orange for progress */
+.sienna-serenity-theme{
+    --intro: #FAF3E0; /* Soft Cream background */
+    --background-color: #F7EED3; /* Light version of Soft Cream */
+    --secondary-background-color: #FFF9E8; /* Lighter cream for contrast */
+    --text-color: #5A3E36; /* Dark Chestnut Brown for text */
+    --accent-color: #E97451; /* Burnt Sienna for accents */
+    --secondary-text-color: #7D4B45; /* Slightly lighter chestnut brown */
+    --highlight-color: #D08D66; /* Warm amber for highlights */
+    --border-color: #E0D4C2; /* Soft Cream for borders */
+    --secondary-border-color: #C7B8A5; /* Muted soft cream for softer borders */
+    --box-shadow-color: rgba(233, 116, 81, 0.2); /* Burnt Sienna soft shadow */
+    --progress-background: #EAE0D0; /* Light background for progress bars */
+    --progress-fill: #E97451; /* Burnt Sienna progress fill */
 }
 
 .neon-pink-theme{
@@ -182,35 +182,27 @@ body {
 }
 
 .theme{
-    background-color: var(--highlight-color);
     position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--highlight-color);
     padding: 15px 25px 15px 20px;
     top: 15vh;
     right: 0;
     li{
         color: transparent;
     }
-
     li:not(:first-child) {display: none;}
     transition: flex-basis 500ms ease-in-out;
 }
 
 .theme:hover{
-    display: flex;
-    justify-content: space-evenly;
+    flex-direction: row-reverse;
     padding: 15px 5px;
-    flex-basis: 200ms;
     li{
-        display: none;
-    }
-    li:not(:first-child){
         display: inline-block;
     }
 }
-
-
-
-
 
 .nav{
     position: fixed;
@@ -226,7 +218,7 @@ body {
     top: 0;
     #tiles{
         display: none;
-        margin: 10px;
+        margin: 10px 25px 10px 10px;
         i{
             font-size: 30px;
         }
@@ -826,10 +818,9 @@ body {
 }
 
 
-
-@media screen and (max-width: 468px) {
-    .theme{
-        flex-direction: column;
+@media screen and (max-width: 620px) {
+    .theme:hover{
+        flex-direction: column-reverse;
     }
 }
 

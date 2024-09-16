@@ -14,8 +14,10 @@ $(document).ready(function() {
     })
 
     $(".theme li").on("click", function(){
-      $("body").removeClass($("body").attr("class"));
-      $("body").addClass($(this).attr("class"));
+      if($(this).attr("title") != "settings"){
+        $("body").removeClass($("body").attr("class"));
+        $("body").addClass($(this).attr("class"));
+      }
     });
 
 
