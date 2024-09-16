@@ -1,38 +1,51 @@
 $(document).ready(function() {
-
-
+    
+    $("body").addClass("default-theme");
     progressBarAnimation();
+
+    $(".theme").children().each(function(){
+
+      var value = "linear-gradient(to bottom right, "+
+                    $(this).css("--accent-color") +", "+
+                    $(this).css("--background-color")+", "+
+                    $(this).css("--highlight-color")+")";
+
+      $(this).children("span").css("background", value);
+    })
+
+    $(".theme li").on("click", function(){
+      $("body").removeClass($("body").attr("class"));
+      $("body").addClass($(this).attr("class"));
+    });
+
 
     function progressBarAnimation(){
         $('.progress').each(function() {
             var percentage = $(this).data('percentage');
-            $(this).animate({width: percentage + '%'}, 1500);  // Animates the width to the percentage in 1 second
-            // $(this).animate({width: percentage + '%'}, 1500);
+            $(this).animate({width: percentage + '%'}, 1500);
         });
     }
 
     function startTypingAnimation() {
       var $typingText = $('#typing-text');
-      var text = $typingText.text(); // Get the text
-      $typingText.text(''); // Clear the text
+      var text = $typingText.text();
+      $typingText.text('');
 
-      // Function to simulate typing effect
       function typeWriter(text, i, fnCallback) {
         if (i < text.length) {
           $typingText.append(text.charAt(i));
           i++;
           setTimeout(function() {
             typeWriter(text, i, fnCallback);
-          }, 100); // Adjust the speed here
+          }, 100);
         } else if (typeof fnCallback === 'function') {
           fnCallback();
         }
       }
 
-      // Start typing animation
       typeWriter(text, 0);
     }
-    // Call the function to start animation when the home link is clicked
+
     $('a[href="#home"]').on('click', function() {
       startTypingAnimation();
     });
@@ -56,11 +69,10 @@ $(document).ready(function() {
       }, 2000);
 
 
-      // Optionally, you can add a delay before navigating to the link
       var link = $(this).attr('href');
       setTimeout(function() {
-        window.open(link, '_blank'); // Navigate after animation
-      }, 1000); // 1 second delay to allow the animation to complete
+        window.open(link, '_blank');
+      }, 1000);
 
     });
 
@@ -77,10 +89,20 @@ $(document).ready(function() {
     $("#tiles").on("click", function(){
       var nav = $(".nav")[0];
       if($(nav).attr("class") === "nav"){
+        $("#tiles-icon").attr("class", "fa fa-bars-staggered");
         $(nav).addClass("responsive");
       }else{
         $(nav).removeClass("responsive");
+        $("#tiles-icon").attr("class", "fa fa-bars");
       }
     })
 
+
+    $(".nav li a").on("click", function(){
+      var nav = $(".nav")[0];
+      if($(this).attr("href").startsWith("#")){
+        $(nav).removeClass("responsive");
+        $("#tiles-icon").attr("class", "fa fa-bars");  
+      }
+    });
 });
