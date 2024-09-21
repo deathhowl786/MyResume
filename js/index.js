@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     
     $("body").addClass("default-theme");
@@ -5,13 +6,19 @@ $(document).ready(function() {
 
     $(".theme").children().each(function(){
 
-      var value = "linear-gradient(to bottom right, "+
-                    $(this).css("--accent-color") +", "+
-                    $(this).css("--background-color")+", "+
-                    $(this).css("--highlight-color")+")";
+      var background = $(this).css("--background-color");
+      var accent = $(this).css("--accent-color");
+      var highlight = $(this).css("--highlight-color");
+
+      var value = "radial-gradient(circle at 50% 0, "+accent+", "+accent+"50"+" 70.71%),"
+                  +"radial-gradient(circle at 6.7% 75%, "+highlight+", "+highlight+"50"+" 70.71%), "
+                  + "radial-gradient(circle at 93.3% 75%, "+background+", "+background+"50"+" 70.71%)";
+
+      // var value = "radial-gradient("+
+      //               background+","+highlight+", "+accent+")";
 
       $(this).children("span").css("background", value);
-    })
+    });
 
     $(".theme li").on("click", function(){
       if($(this).attr("title") != "settings"){
@@ -49,7 +56,9 @@ $(document).ready(function() {
     }
 
     $('a[href="#home"]').on('click', function() {
-      startTypingAnimation();
+      if($("#typing-text").text() == "Welcome to My Resume"){
+        startTypingAnimation();
+      }
     });
 
 

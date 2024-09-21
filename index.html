@@ -34,14 +34,15 @@
         <ul class="theme">
             <li class="fa fa-gear icon" title="settings" id="theme-icon"></li>
             <li class="default-theme" title="Default Theme"><span class="circle">Default</span></li>
-            <li class="celestial-twilight-theme" title="Celestial Twilight"><span class="circle">Celestial Twilight</span></li>
-            <li class="forest-green-theme" title="Forest Green"><span class="circle">Forest Green</span></li>
-            <li class="elegant-amethyst-theme" title="Elegant Amethyst"><span class="circle">Elegant Amethyst</span></li>
-            <li class="midnight-blue-theme" title="Midnight Blue"><span class="circle">Midnight Blue</span></li>
-            <li class="soft-coral-theme" title="Soft Cora"><span class="circle">Soft Coral</span></li>
-            <li class="neon-pink-theme" title="Neon Pink"><span class="circle">Neon Pink</span></li>
             <li class="sienna-serenity-theme" title="Sienna Serenity"><span class="circle">Sienna Serenity</span></li>
+            <li class="celestial-twilight-theme" title="Celestial Twilight"><span class="circle">Celestial Twilight</span></li>
+            <li class="soft-coral-theme" title="Soft Coral"><span class="circle">Soft Coral</span></li>
+            <li class="elegant-amethyst-theme" title="Elegant Amethyst"><span class="circle">Elegant Amethyst</span></li>
+            <li class="forest-green-theme" title="Forest Green"><span class="circle">Forest Green</span></li>
+            <li class="midnight-blue-theme" title="Midnight Blue"><span class="circle">Midnight Blue</span></li>
+            <li class="neon-pink-theme" title="Neon Pink"><span class="circle">Neon Pink</span></li>
             <li class="mystic-plum-theme" title="Mystic Plum"><span class="circle">Mystic Plum</span></li>
+            <li class="nightmare-veil-theme" title="Nightmare Veil"><span class="circle">Nightmare Veil</span></li>
         </ul>
 
     <!-- Home Section -->
@@ -57,10 +58,12 @@
 
     <section id="about-me" class="view">
         <h1><i class="fa-solid fa-user"></i> About Me</h1>
-        <p>I am currently a Student at St. Xaviers College, Fort.<br>
-            I chose Coding as my subject in FYJC as I loved to solve Math and other Problems,<br>
-            thereafter i've always wanted to learn more..
-        </p>
+        <div class="paragraphs">
+            <p>I am currently a Student at St. Xaviers College, Fort.<br>
+                I chose Coding as my subject in FYJC as I loved to solve Math and other Problems,
+                thereafter i've always wanted to learn more..
+            </p>
+        </div>
         <div class="container">
             <div class="personal-details">
                 <h2>Few details of your Interest</h2>
@@ -73,12 +76,21 @@
                     <li><strong><i class="fa fa-house"></i> Residence</strong> <span>Mumbai, India</span></li>
                 </ul>
             </div>
+
+            <div class="paragraphs">
                 <p>
-                    Apart From coding..<br>In my mean time, I love to solve Rubik's Cube, play games online, watch business insider or cooking videos 
-                    on Youtube.<br><br>
-                    As of outdoor activities, I love playing football, I go trekking with my friends ocassionally and I am a good Swimmer too!<br><br>
-                    You can call me a foodie the way i cook food and eat it all myself xD! I make good biryani btw :P
+                    Apart From coding..<br>
+                    In my mean time, I love to solve the Rubik's Cube, 
+                    I also enjoy playing games online, watch business insider and cooking videos on Youtube.
                 </p>
+                <p>
+                    <strong>That's not it</strong>
+                    I enjoy outdoor activities, like playing football,  
+                    trekking with my friends and I am a good Swimmer too!<br>
+                    I would identify as a foodie,the way i cook food and eat 
+                    it all xD! I make good biryani btw :P
+                </p>
+        </div>
         </div>
     </section>
 
@@ -292,8 +304,8 @@
 
         
         <div class="experience-item">
-            <h2>Error : 404</h1>
-            <p>Experience Not Found :(</p>
+            <h2>Error : 404</h2>
+            <p>Experience Not Found <span style="display: inline-block;">:(</span></p>
         </div>
 
         <div class="experience-item">
@@ -370,7 +382,7 @@
 
                 </p>
                 <div class="project-links">
-                    <a href="https://deathhowl786.github.io/TodoListManager/" target="_blank">TodoList Manager</a>
+                    <a href="http://tlmanager.free.nf/" target="_blank">TodoList Manager</a>
                     <a href="https://github.com/deathhowl786/TodoListManager/" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
@@ -419,12 +431,12 @@
             </div>
         </div>
         <div class="contact">
-            <form action="" onsubmit="event.preventDefault();">
+            <form action="./php/hit_me_up.php" method="post">
                 <h1><i class="fa-solid fa-paper-plane"></i></h1>
                 <h1>Hit Me Up !</h1>
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="email" name="email" id="email" placeholder="Email">
-                <textarea name="message" id="message" placeholder="Your Message goes Here!"></textarea>
+                <input type="text" name="name" id="name" placeholder="Name" required maxlength="50">
+                <input type="email" name="email" id="email" placeholder="Email" required maxlength="50">
+                <textarea name="message" id="message" placeholder="Your Message goes Here!" required maxlength="250"></textarea>
                 <input type="submit" value="Send Message !">
             </form>
         </div>

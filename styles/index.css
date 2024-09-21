@@ -16,38 +16,57 @@
     --progress-background: #e1e1e1;
 }
 
-.celestial-twilight-theme{
+.sienna-serenity-theme {
+    --intro: #FAF3E0; /* Soft Cream background */
+    --background-color: #F7EED3; /* Light version of Soft Cream */
+    --secondary-background-color: #FFF9E8; /* Lighter cream for contrast */
+    --text-color: #4A2F25; /* Darker Chestnut Brown for improved contrast */
+    --accent-color: #E97451; /* Burnt Sienna for accents */
+    --secondary-text-color: #7D4B45; /* Slightly lighter chestnut brown */
+    --highlight-color: #D08D66; /* Warm amber for highlights */
+    --border-color: #E0D4C2; /* Soft Cream for borders */
+    --secondary-border-color: #C7B8A5; /* Muted soft cream for softer borders */
+    --box-shadow-color: rgba(233, 116, 81, 0.3); /* Darker Burnt Sienna soft shadow */
+    --progress-background: #EAE0D0; /* Light background for progress bars */
+    --progress-fill: #E97451; /* Burnt Sienna progress fill */
+}
+
+
+.celestial-twilight-theme {
     --intro: #2E2A2F; /* Deep twilight purple */
     --background-color: #3C3A43; /* Slightly lighter twilight purple */
     --secondary-background-color: #4E4C55; /* Muted twilight gray */
     --text-color: #E5E5E5; /* Soft light gray for text */
-    --accent-color: #8E7D8B; /* Dusty mauve */
+    --accent-color: #A67B93; /* Brighter mauve for more vibrancy */
     --secondary-text-color: #B3B3B3; /* Light gray for secondary text */
-    --highlight-color: #9C6E7D; /* Soft rosewood highlight */
-    --border-color: #3D3A40; /* Deep twilight gray border */
+    --highlight-color: #A084B5; /* Brighter lavender for highlights */
+    --border-color: #655e6c; /* Deep twilight gray border */
     --secondary-border-color: #57575F; /* Slightly lighter twilight gray border */
     --box-shadow-color: rgba(142, 125, 139, 0.4); /* Dusty mauve shadow glow */
     --progress-background: #3D3A40;
-    --progress-fill: #8E7D8B; /* Dusty mauve for progress */
+    --progress-fill: #A67B93; /* Brighter mauve for progress */
 }
 
-.soft-coral-theme{
-    --intro: #F8E4E4; /* Soft coral pink */
-    --background-color: #FCE4E4; /* Light coral pink */
-    --secondary-background-color: #FAD4D4; /* Slightly darker coral pink */
-    --text-color: #6F4F4F; /* Warm brown for text */
-    --accent-color: #FF6F61; /* Coral red */
-    --secondary-text-color: #B0A6A6; /* Light brown */
-    --highlight-color: #FF8C8C; /* Light coral red for highlights */
-    --border-color: #F4C6C6; /* Light coral border */
-    --secondary-border-color: #F9B8B8; /* Slightly darker coral border */
-    --box-shadow-color: rgba(255, 105, 97, 0.4); /* Coral red shadow glow */
-    --progress-background: #F4C6C6;
-    --progress-fill: #FF6F61; /* Coral red for progress */
+
+.soft-coral-theme {
+    --intro: #ffffff; /* Soft white */
+    --background-color: #ffe6f2; /* Light pastel pink */
+    --secondary-background-color: #fffbfc; /* Off-white for contrast */
+    --text-color: #5D305D; /* Slightly lighter plum */
+    --accent-color: #ff6f9f; /* Warm medium pink for accents */
+    --secondary-text-color: #804a80; /* Muted plum for secondary text */
+    --highlight-color: #ff8cb4; /* Soft coral pink for highlights */
+    --border-color: #f3d1e4; /* Light pink border */
+    --secondary-border-color: #ebc2d6; /* Slightly darker pink border */
+    --box-shadow-color: rgba(255, 111, 159, 0.2); /* Subtle pink shadow */
+    --progress-background: #f9e2eb; /* Light pink for progress background */
+    --progress-fill: #ff6f9f; /* Medium pink for progress fill */
+    --button-background: #ffad9c; /* Soft peach as a secondary accent */
 }
+
 
 /* Purple Theme */
-.elegant-amethyst-theme{
+.elegant-amethyst-theme {
     --intro: #f8f7ff; /* Soft lavender white */
     --background-color: #e7e3f5; /* Light amethyst */
     --secondary-background-color: #ffffff; /* Clean white */
@@ -57,10 +76,11 @@
     --highlight-color: #6a0e6a; /* Deep purple highlight */
     --border-color: #d8c6e0; /* Soft lavender border */
     --secondary-border-color: #b8a4c9; /* Muted lavender border */
-    --box-shadow-color: rgba(123, 104, 238, 0.2); /* Light purple shadow glow */
+    --box-shadow-color: rgba(123, 104, 238, 0.3); /* Soft purple shadow glow */
     --progress-background: #e0d9f5; /* Very light amethyst */
     --progress-fill: #7a4d8c; /* Rich purple for progress */
 }
+
 
 
 
@@ -96,21 +116,6 @@
         --progress-fill: #20c997; /* Neon green for progress */    
 }
 
-.sienna-serenity-theme{
-    --intro: #FAF3E0; /* Soft Cream background */
-    --background-color: #F7EED3; /* Light version of Soft Cream */
-    --secondary-background-color: #FFF9E8; /* Lighter cream for contrast */
-    --text-color: #5A3E36; /* Dark Chestnut Brown for text */
-    --accent-color: #E97451; /* Burnt Sienna for accents */
-    --secondary-text-color: #7D4B45; /* Slightly lighter chestnut brown */
-    --highlight-color: #D08D66; /* Warm amber for highlights */
-    --border-color: #E0D4C2; /* Soft Cream for borders */
-    --secondary-border-color: #C7B8A5; /* Muted soft cream for softer borders */
-    --box-shadow-color: rgba(233, 116, 81, 0.2); /* Burnt Sienna soft shadow */
-    --progress-background: #EAE0D0; /* Light background for progress bars */
-    --progress-fill: #E97451; /* Burnt Sienna progress fill */
-}
-
 .neon-pink-theme{
     --intro: #121212; /* Dark charcoal */
     --background-color: #1b1b1b; /* Slightly lighter charcoal */
@@ -139,9 +144,21 @@
     --box-shadow-color: rgba(0, 0, 0, 0.7);
     --progress-background: #2c2c2c;
     --progress-fill: #9b6f9c;
-    /* span{
-        background-color: #9b6f9c;
-    } */
+}
+
+.nightmare-veil-theme{
+    --intro: #0a0a0a; /* Pitch black */
+    --background-color: #1a1a1a; /* Deep shadow gray */
+    --secondary-background-color: #2e2e2e; /* Dark, moody charcoal */
+    --text-color: #d9d9d9; /* Ghostly pale white */
+    --accent-color: #b3001b; /* Blood-red for horror elements */
+    --secondary-text-color: #909090; /* Muted gray for secondary content */
+    --highlight-color: #820000; /* Dark crimson for accents */
+    --border-color: #3c3c3c; /* Ominous dark borders */
+    --secondary-border-color: #5a5a5a; /* Muted gray borders */
+    --box-shadow-color: rgba(255, 0, 0, 0.2); /* Creepy blood-red shadow */
+    --progress-background: #3c3c3c; /* Dark progress background */
+    --progress-fill: #b3001b; /* Blood-red progress fill */
 }
 
 
@@ -163,22 +180,25 @@ body {
 
 #theme-icon{
     color: var(--secondary-background-color);
-    font-size: 40px;
+    font-size: 55px;
     margin: auto;
 }
 
 .circle{
-    height: 50px;
-    width: 50px;
+    height: 75px;
+    width: 75px;
     border-radius: 50%;
     display: inline-block;
     margin: 5px;
     cursor: pointer;
+    color: transparent;
+    text-align: center;
 }
 
 .circle:hover{
     scale: 1.15;
     transition: scale 0.35s;
+    color: var(--text-color);
 }
 
 .theme{
@@ -189,9 +209,6 @@ body {
     padding: 15px 25px 15px 20px;
     top: 15vh;
     right: 0;
-    li{
-        color: transparent;
-    }
     li:not(:first-child) {display: none;}
     transition: flex-basis 500ms ease-in-out;
 }
@@ -219,6 +236,7 @@ body {
     #tiles{
         display: none;
         margin: 10px 25px 10px 10px;
+        padding: auto auto;
         i{
             font-size: 30px;
         }
@@ -341,7 +359,7 @@ body {
 
 #about-me .container{
     display: grid;
-    width: 65%;
+    width: 70%;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 30px;
@@ -391,13 +409,33 @@ body {
     margin-inline-end: 20px;
 }
 
+.paragraphs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.paragraphs p {
+    flex: 1 1 calc(50% - 30px); /* Adjusts for two columns */
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.paragraphs p:hover {
+    transform: translateY(-10px); /* Adds subtle hover effect */
+}
 
 #qualifications {
     padding: 60px 20px;
     text-align: center;
 }
-
-
 .roadmap {
     display: flex;
     justify-content: space-around;
@@ -736,9 +774,12 @@ body {
 .contact form, .socials{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     min-width: 30vw;
     max-width: 600px;
+    min-height: 60vh;
+    max-height: 60vh;
     margin: 0 auto;
     padding: 20px;
     background-color: var(--secondary-background-color);
@@ -763,6 +804,7 @@ body {
     input[type="text"],
     input[type="email"],
     textarea {
+        background-color: var(--background-color);
         width: 100%;
         padding: 12px;
         margin-bottom: 15px;
@@ -771,20 +813,23 @@ body {
         font-size: 1rem;
         color: var(--text-color);
         box-sizing: border-box;
+        font-family: "Raleway";
     }
 
     input[type="text"]::placeholder,
     input[type="email"]::placeholder,
     textarea::placeholder {
         color: var(--secondary-text-color);
+        font-family: "Raleway";
     }
-
+    
     textarea {
         height: 150px;
         resize: vertical;
     }
 
     input[type="submit"] {
+        font-family: "Raleway";
         background-color: var(--accent-color);
         color: #fff;
         padding: 12px 20px;
@@ -818,9 +863,18 @@ body {
 }
 
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 948px) {
+
+    .theme{
+        .circle{
+            width: 60px;
+            height: 60px;
+            font-size: 10px;
+        }
+    }
     .theme:hover{
-        flex-direction: column-reverse;
+        flex-direction: column;
+        z-index: 1;
     }
 }
 
