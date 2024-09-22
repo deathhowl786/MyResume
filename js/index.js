@@ -116,4 +116,21 @@ $(document).ready(function() {
         $("#tiles-icon").attr("class", "fa fa-bars");  
       }
     });
+
+    $("#next").on("click", function(){
+      $(this).attr("data", ($(this).attr("data")-90));
+      var value = $(this).attr("data");
+      if(value%180 != 0 ){
+        $("next").css("color", "--accent-color");
+        $(".para .indoor, .para .other").css("display", "flex");
+      }else{
+        $(".para .indoor, .para .other").css("display", "none");
+      }
+      $(".para").css("transform","rotateY("+value+"deg)");
+    });
+
+    $("#indoor-right").on("click", function(){
+
+    });
+    
 });

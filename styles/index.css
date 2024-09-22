@@ -358,6 +358,7 @@ body {
 }
 
 #about-me .container{
+    margin: 20px 0px 0px 0px;
     display: grid;
     width: 70%;
     grid-template-columns: repeat(2, 1fr);
@@ -409,28 +410,99 @@ body {
     margin-inline-end: 20px;
 }
 
+/* Styling for the card container */
 .paragraphs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: space-between;
+    perspective: 2000px;
+    max-width: 600px;
+    height: 350px;
+    /* overflow: hidden; */
+  }
+  
+  /* The card itself */
+  .para {
     position: relative;
-}
-
-.paragraphs p {
-    flex: 1 1 calc(50% - 30px); /* Adjusts for two columns */
-    background-color: var(--secondary-background-color);
-    color: var(--secondary-text-color);
-    font-weight: 500;
-    padding: 15px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    /* overflow: hidden; */
+  }
+  
+  .para .intro, .para .indoor, .para .outdoor, .para .other {
+    font-family: "Poppins";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility:hidden;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow:auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-}
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    h2{
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        text-decoration: none;
+        font-family: "Cinzel";
+    }
+  }
+  
+  .para .intro, .para .outdoor{
+    background-color: var(--accent-color);
+    h2, p{
+        color: var(--text-color) !important;
+    }
+  }
 
-.paragraphs p:hover {
-    transform: translateY(-10px); /* Adds subtle hover effect */
-}
+  @media screen and (max-width:395px){
+    .paragraphs{
+        min-height: 600px;
+    }
+  }
+  
+
+  @media screen and (min-width: 395px) and (max-width:598px){
+    .para{
+        overflow: none;
+    }
+    .paragraphs{
+        height: 500px;
+    }
+  }
+
+
+  .para .indoor, .para .other{
+    background-color: var(--text-color);
+    display: none;
+    h2, p{
+        color: var(--accent-color) !important;
+    }
+  }
+  
+
+
+  .para .indoor{
+    transform: rotateY(90deg);
+  }
+
+  .para .outdoor{
+    transform: rotateY(180deg);
+  }
+  
+  .para .other{
+    transform: rotateY(270deg);
+  }
+
+  #next{
+    position: absolute;
+    font-size: 30px;
+    right: -30px;
+    top: 50%;
+  }
 
 #qualifications {
     padding: 60px 20px;
