@@ -449,6 +449,10 @@ body {
         text-decoration: none;
         font-family: "Cinzel";
     }
+    p{
+        padding: 15px;
+        text-align: justify;
+    }
   }
   
   .para .intro, .para .outdoor{
@@ -458,14 +462,14 @@ body {
     }
   }
 
-  @media screen and (max-width:395px){
+  @media screen and (max-width: 423px){
     .paragraphs{
         min-height: 600px;
     }
   }
   
 
-  @media screen and (min-width: 395px) and (max-width:598px){
+  @media screen and (min-width: 423px) and (max-width:598px){
     .para{
         overflow: none;
     }
