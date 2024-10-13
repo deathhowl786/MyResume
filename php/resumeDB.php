@@ -30,13 +30,15 @@ class resumeDB
         $responses = array();
         $counter = 0;
 
-        if ($result = $this->cn->query("SELECT * FROM contact_form_responses;")) {
+        if ($result = $this->cn->query("SELECT * FROM contact_form_responses ORDER BY date_time DESC;")) {
             while ($row = $result->fetch_assoc()) {
                 $responses[$counter++] = new Response(
+                    $row['sr_no'],
                     $row['name'],
                     $row['email'],
                     $row['message'],
-                    $row['date_time']
+                    $row['date_time'],
+                    $row['is_archive']
                 );
             }
         } else {
@@ -68,4 +70,33 @@ class resumeDB
 
         $stmt->close();
     }
+
+    function updateColumn($sr_no, $col_name, $value){
+        $query = "UPDATE contact_form_responses
+                  SET $col_name = $value 
+                  WHERE sr_no = $sr_no ;";
+
+        if ($this->cn->query($query)) {
+            return true;
+        }
+            return false;
+        }
+
+    function getVal($sr_no, $col_name){
+        $query = "SELECT $col_name FROM contact_form_responses WHERE sr_no = $sr_no";
+
+        if ($result = $this->cn->query($query)) {
+            return $result->fetch_assoc();
+        }
+            return -1;
+    }
+
+    function executeQuery($query){
+        if ($this->cn->query($query)) {
+            return true;
+        }
+            return false;
+    }
+
+
 }

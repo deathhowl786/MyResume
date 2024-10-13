@@ -202,7 +202,7 @@ body {
                                           $config['server_username'], 
                                           $config['server_password'], 
                                           $config['db_name']);
-                    $my_db->setResponse(new Response($name, $email, $message, $date_time));
+                    $my_db->setResponse(new Response(null, $name, $email, $message, $date_time, 0));
                     printMessage("<h1>Your message has been recorded!</h1><h2>Thank You for contacting me !!</h2>", "success");
                 } catch (Exception $e) {
                     // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
