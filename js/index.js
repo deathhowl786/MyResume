@@ -71,7 +71,7 @@ $(document).ready(function() {
 
 
 
-    $('.socials a').on('click', function(e) {
+    $('.contact-info a').on('click', function(e) {
       e.preventDefault();
        $('#paper-plane').addClass('fly');
 
